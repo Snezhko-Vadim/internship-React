@@ -10,6 +10,7 @@ module.exports = {
     output:{
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname,'dist'),
+        publicPath: '/'
     },
     resolve:{
         extensions:['.js','.json']
@@ -17,6 +18,9 @@ module.exports = {
     devtool: 'inline-cheap-source-map',
     devServer:{
         port:4200
+    },
+    devServer: {
+        historyApiFallback: true,
     },
     plugins:[
         new HTMLWebpackPlugin({
