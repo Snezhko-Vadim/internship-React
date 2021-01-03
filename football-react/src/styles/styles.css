@@ -4,7 +4,8 @@
     display: none;
   }
 .parallax{
-    background: url('../../assets/images/bg_5.jpg');
+    /* background: url('../../assets/images/bg_5.jpg'); */
+    background-color: darkgreen;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
