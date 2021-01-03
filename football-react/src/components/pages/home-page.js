@@ -4,10 +4,10 @@ import {Link} from 'react-router-dom'
 function HomePage (){
     return(
         <div className='home-page'>
-            <h1>Home Page</h1>
-            <Link to = '/competitions/'>Select competition</Link>
-            <Link to = '/login'>Login</Link>
-            <Link to = '/profile'>Profile</Link>
+            <h1 className = 'main__title'>Football</h1>
+            <Link className = 'home-page__btn' to = '/competitions/'>Select competition</Link>
+            <Link className = 'home-page__btn' to = '/login'>Login</Link>
+            <Link className = 'home-page__btn' to = '/profile'>Profile</Link>
         </div>
     )
 }

@@ -67,7 +67,6 @@ const mapDispatchToProps = ((dispatch)=>{
     return{
         fetchMatches: (teamId) => dispatch(fetchMatches(teamId)),
         fetchTeam: (teamId) => dispatch(fetchTeam(teamId)),
-        //addToFavoritesPlayers: (player) => dispatch(addToFavoritesPlayers(player)),
         onAddToFavoritesTeams: (team) => dispatch(addToFavoritesTeams(team)),
     }
 })

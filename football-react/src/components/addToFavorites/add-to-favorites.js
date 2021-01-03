@@ -4,11 +4,15 @@ import {connect} from 'react-redux'
 const AddToFavorites = ({isLogged,onAddAction}) => {
     if(isLogged){
         return(
-            <a className = 'add-to-favorites' onClick = {onAddAction}>addToFavorites</a>
+            <a className = 'add-to-favorites' title = 'Add to favorites' onClick = {onAddAction}>
+                <i className = 'fas fa-plus'></i>
+            </a>
         )
     }
     return(
-        <a style = {{display: 'none'}} className = 'add-to-favorites' onClick = {onAddAction}>addToFavorites</a>
+        <a style = {{display: 'none'}} className = 'add-to-favorites' onClick = {onAddAction}>
+            <i className = 'fas fa-plus'></i>
+        </a>
     )
 }
 

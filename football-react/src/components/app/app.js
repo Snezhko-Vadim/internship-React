@@ -1,8 +1,6 @@
 import React from 'react'
 import {Route, Switch} from 'react-router-dom'
-import {HomePage, CompetitionsPage, ProfilePage, LoginPage} from '../pages'
-import Standings from '../standings'
-import Team from '../team'
+import {HomePage, StandingsPage, TeamPage, CompetitionsPage, ProfilePage, LoginPage} from '../pages'
 
 export default function App(){
     return(
@@ -15,20 +13,20 @@ export default function App(){
             <Route 
             path='/competitions/:compId/'
             render = {({match}) => {
-                return <Standings idOfCompetition = {match.params.compId}/>
+                return <StandingsPage idOfCompetition = {match.params.compId}/>
             }}
             exact
             />
             <Route
             path='/competitions/:compId/teams/:teamId'
             render = {({match}) => {
-                return <Team teamId = {match.params.teamId}/>
+                return <TeamPage teamId = {match.params.teamId}/>
             }}
             />
             <Route
             path='/teams/:teamId'
             render = {({match}) => {
-                return <Team teamId = {match.params.teamId}/>
+                return <TeamPage teamId = {match.params.teamId}/>
             }}
             />
             <Route 
@@ -44,7 +42,7 @@ export default function App(){
             <Route 
             path='/profile/favorites-teams'
             render = {() => {
-                return <Team teamId = {match.params.teamId}/>
+                return <TeamPage teamId = {match.params.teamId}/>
             }}
             exact
             />
