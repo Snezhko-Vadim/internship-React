@@ -13,7 +13,7 @@ module.exports = {
         publicPath: '/'
     },
     resolve:{
-        extensions:['.js','.json']
+        extensions:['.js','.json','.ts', '.tsx']
     },
     devtool: 'inline-cheap-source-map',
     devServer:{
@@ -36,7 +36,7 @@ module.exports = {
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                use: ['file-loader','url-loader'],
+                use: ['file-loader'],
             },
             {
                 test:/\.(ttf|woff|woff2|eot)$/,
@@ -46,6 +46,10 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 use: 'babel-loader',
                 exclude: /node_modules/,
+            },
+            {
+                test: /\.tsx?$/,
+                use: "ts-loader",
             }
         ]
     }

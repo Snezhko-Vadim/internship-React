@@ -4,8 +4,8 @@
     display: none;
   }
 .parallax{
-    /* background: url('../../assets/images/bg_5.jpg'); */
     background-color: darkgreen;
+    background: url('../../assets/images/bg_5.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -15,6 +15,20 @@
     width: 100%;
     min-height: 3840px;
     z-index: -1;
+}
+.preloader{
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.329);
+  align-items: center;
+  justify-content: center;
+  font-size: 170px;
+}
+.preloader i{
+  animation: rotate 1400ms linear infinite;
+  color: darkgreen;
 }
 body{
   margin: 0;
@@ -533,9 +547,9 @@ thead .standing-table__string:nth-child(1) .standing-table__cell:nth-child(10){
 .login-page__title{
     margin:0;
     text-transform: uppercase;
+    font-weight: bold;
     font-family: 'Poppins', sans-serif;
-    font-size: 35px;
-    font-weight: 500;
+    font-size: 45px;
     color: rgb(223, 211, 195);
 }
 .login-page__btn{
@@ -632,7 +646,6 @@ thead .standing-table__string:nth-child(1) .standing-table__cell:nth-child(10){
 }
 .team__information-squad-item .add-to-favorites:hover{
     color: white;
-    transform: scale(1.15);
     transition-property:all;
     transition-duration: 100ms;
   }
